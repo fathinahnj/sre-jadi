@@ -7,7 +7,6 @@
         <link href='#' rel='stylesheet'>
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="style.css" />
-        <script type='text/javascript' src='#'></script>
         <script src="./app.js" defer></script>
     </head>
     <body>
@@ -20,7 +19,7 @@
                         </div>
                         <div class="steps-content">
                             <h3>Step <span class="step-number">1</span></h3>
-                            <p class="step-number-content active">Enter your Team information to participate in SICLUS 2024.</p>
+                            <p class="step-number-content active">Enter your team information to participate in SICLUS 2024.</p>
                         </div>
                         <ul class="progress-bar">
                             <li class="active">Team Information</li>
@@ -30,180 +29,215 @@
                             <li>Submission</li>
                         </ul>
                     </div>
-            <div class="right-side">
-                <div class="main active">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Your Team Information</h2>
-                        <p>Enter your Team information to participate in SICLUS 2024.</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require id="user_name">
-                            <span>Team Name</span>
+                    <div class="right-side">
+                        <div class="main active">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Your Team Information</h2>
+                                <p>Enter your team information to participate in SICLUS 2024.</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input 
+                                    type="text"
+                                    name="teamName"
+                                    required
+                                    require
+                                    id="user_name">
+                                    <span>Team Name</span>
+                                </div>
+                                <div class="input-div"> 
+                                    <input type="text" name="institution" required>
+                                    <span>Institution</span>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="text" name="country" required>
+                                    <span>Country</span>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <select 
+                                    name="subTheme"
+                                    id="theme"
+                                    required
+                                    require
+                                    class="select">
+                                        <option value="">Select Sub theme</option>
+                                        <option>Maritime</option>
+                                        <option>Infrastructure</option>
+                                        <option>Settlement</option>
+                                        <option>Economy</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="next_button">Next Step</button>
+                            </div>
                         </div>
-                        <div class="input-div"> 
-                            <input type="text" required>
-                            <span>Institution</span>
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Team Leader</h2>
+                                <p>Inform us about your team leader.</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input 
+                                    type="text" 
+                                    name="teamLeaderName"
+                                    required 
+                                    require 
+                                    id="user_name">
+                                    <span>Your Name</span>
+                                </div>
+                                <div class="input-div"> 
+                                    <input 
+                                    type="text" 
+                                    name="teamLeaderMajor"
+                                    required>
+                                    <span>Major</span>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input 
+                                    type="tel" 
+                                    name="teamLeaderPhoneNumber"
+                                    required 
+                                    pattern="\+?[0-9]{10,15}" 
+                                    title="Phone number must be between 10 to 15 digits and can start with +">
+                                    <span>Phone number</span>
+                                </div>
+                                <div class="input-div">
+                                    <input 
+                                    type="email"
+                                    name="teamLeaderEmail" 
+                                    required 
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                                    title="Please enter a valid email address">
+                                    <span>E-mail Address</span>
+                                </div>
+                            </div>                            
+                            <div class="buttons button_space">
+                                <button class="back_button">Back</button>
+                                <button class="next_button">Next Step</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Country</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <select>
-                                <option>Select Sub theme</option>
-                                <option>Maritime</option>
-                                <option>Infrastructure</option>
-                                <option>Settlement</option>
-                                <option>Economy</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Team Leader</h2>
-                        <p>Inform about your team leader.</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Team Leader Name</span>
-                        </div>
-                        <div class="input-div"> 
-                            <input type="text" required>
-                            <span>Team Leader Major</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Phone number</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>E-mail Address</span>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
 
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Member</h2>
-                        <p>Give us More information regarding the member?</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>First Member name</span>
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Member</h2>
+                                <p>Give us information about your team members</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="text" name="firstMemberName" required>
+                                    <span>First Member name</span>
+                                </div>
+                                <div class="input-div"> 
+                                    <input type="text" name="firstMemberMajor" required>
+                                    <span>Major</span>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="text" name="secondMemberName" required>
+                                    <span>Second Member Name</span>
+                                </div>
+                                <div class="input-div">
+                                    <input type="text" name="secondMemberMajor" required>
+                                    <span>Major</span>
+                                </div>
+                            </div>
+                            <div class="buttons button_space">
+                                <button class="back_button">Back</button>
+                                <button class="next_button">Next Step</button>
+                            </div>
                         </div>
-                        <div class="input-div"> 
-                            <input type="text" required require>
-                            <span>Major</span>
+                        
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Registration Proof</h2>
+                                <p>Let us know if you completed the registration task</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="proofOfUploadingFlyersOnIgStory" id="Flyer">
+                                    <label>Flyer on Instagram</label>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="proofOfUploadingTwibbonOnIgFeed" id="Twibbon">
+                                    <label>Twibbon</label>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="proofOfSharingFlyers" id="flyer">
+                                    <label>Flyer on Group Chats</label>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="studentIdCard" id="student_id_card">
+                                    <label>Student ID Card/Study Plan</label>
+                                </div>
+                            </div>
+                            <div class="buttons button_space">
+                                <button class="back_button">Back</button>
+                                <button class="next_button">Next Step</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Second Member Name</span>
+                         
+                        
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Submission</h2>
+                                <p>Submit your team work</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="originalitySheet" id="Origin">
+                                    <label>Originality Sheet</label>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="abstract" id="sbstract">
+                                    <label>Abstract</label>
+                                </div>
+                            </div>
+                            <div class="buttons button_space">
+                                <button class="back_button">Back</button>
+                                <button class="submit_button">Submit</button>
+                            </div>
                         </div>
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Major</span>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
+                         <div class="main">
+                             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            </svg>
+                             
+                            <div class="text congrats">
+                                <h2>Congratulations!</h2>
+                                  Thanks Energizen. <span class="shown_name"></span> your
+                                  information has been submitted successfully. Join the WhatsApp
+                                  group
+                                  <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC">here</a>.
+                                </p>
+                              </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Registration Proof</h2>
-                        <p>Let us Know if you completed the registration task and proof if you are a student</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="Flyer" id="Flyer" require>
-                            <label>Flyer</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="Twibbon" id="Twibbon" require>
-                            <label>Twibbon</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="flyer" id="flyer" require>
-                            <label>Flyer (Group chat)</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="student_id_card" id="student_id_card" require>
-                            <label>Student ID Card/LOA (PDF)</label>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                 
-                
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Submission</h2>
-                        <p>Submit your team work</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="Origin" id="Origin" require>
-                            <label>Originality Sheet</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="abstract" id="sbstract" require>
-                            <label>Abstract</label>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="submit_button">Submit</button>
-                    </div>
-                </div>
-                 <div class="main">
-                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                    </svg>
-                     
-                    <div class="text congrats">
-                        <h2>Congratulations!</h2>
-                        <p>Thanks Energizen. <span class="shown_name"></span> your information has been submitted successfully. Join the WhatsApp group <a href="https://your_whatsapp_group_link_here">here</a>.</p>
-                    </div>
-
             </div>
-        </div>
-    </div>
-</div>
+        <script src="./innovation.js"></script>
+    </body>
+</html>

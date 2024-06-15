@@ -20,10 +20,11 @@
                         </div>
                         <div class="steps-content">
                             <h3>Step <span class="step-number">1</span></h3>
-                            <p class="step-number-content active">Enter your Information to participate in SICLUS 2024.</p>
+                            <p class="step-number-content active">Enter your information to participate in SICLUS 2024.</p>
                         </div>
                         <ul class="progress-bar">
                             <li class="active">Your Information</li>
+                            <li>Proof</li>
                             <li>Payment</li>
                             <li>Submission</li>
                         </ul>
@@ -33,26 +34,61 @@
                     <small><i class="fa fa-envira"></i></small>
                     <div class="text">
                         <h2>Self Bio</h2>
-                        <p>Inform about yourself.</p>
+                        <p>Inform us about yourself.</p>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="text" required require>
+                            <input type="text" name="name" required require id="user_name">
                             <span>Your Name</span>
                         </div>
                         <div class="input-div"> 
-                            <input type="text" required>
+                            <input type="text" name="institution" required>
                             <span>Institution</span>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="text" required require>
+                            <input type="tel" name="phoneNumber" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
                             <span>Phone number</span>
                         </div>
                         <div class="input-div">
-                            <input type="text" required require>
+                            <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
                             <span>E-mail Address</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="next_button">Next Step</button>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <small><i class="fa fa-envira"></i></small>
+                    <div class="text">
+                        <h2>Registration Proof</h2>
+                        <p>Let us know if you completed the registration task</p>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="file" name="proofOfUploadingFlyersOnIgStory" required  id="Flyer">
+                            <label>Flyer on instagram story</label>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="file" name="proofOfUploadingTwibbonOnIgFeed" required name="Twibbon" id="Twibbon">
+                            <label>Twibbon</label>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="file" required name="proofOfSharingFlyers" id="flyer">
+                            <label>Flyer on Group Chats</label>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="file" required name="studentIdCard"id="student_id_card">
+                            <label>Student ID Card/Study Plan</label>
                         </div>
                     </div>
                     <div class="buttons button_space">
@@ -61,8 +97,7 @@
                     </div>
                 </div>
 
-                
-                <div class="main">
+                 <div class="main">
                     <small><i class="fa fa-envira"></i></small>
                     <div class="text">
                         <h2>Payment Proof</h2>
@@ -70,25 +105,24 @@
                     </div>
                     <div class="payment-options">
                         <label>
-                            <input type="checkbox" name="payment_method" value="bank">
+                            <input type="checkbox" name="payment_method" value="bank" required>
                             <span class="payment-method">
                                 <i class="fa fa-credit-card-alt"></i> Bank Digital Payment
                             </span>
                         </label>
                         <label>
-                            <input type="checkbox" name="payment_method" value="paypal">
+                            <input type="checkbox" name="payment_method" value="paypal" required>
                             <span class="payment-method">
                                 <i class="fa fa-paypal"></i> PayPal
                             </span>
                         </label>
                         <label>
-                            <input type="checkbox" name="payment_method" value="E-wallet">
+                            <input type="checkbox" name="payment_method" value="E-wallet" required>
                             <span class="payment-method">
                                 <i class="fa fa-money"></i> E-Wallet
                             </span>
                         </label>
-                    </div>
-                    <!-- Ganti user name dengan input teks untuk nama akun -->
+                    </div>                    
                     <div class="input-text">
                         <div class="input-div">
                             <input type="text" required>
@@ -103,7 +137,7 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" accept="image/png" required name="Payment" id="Payment">
+                            <input type="file" name="paymentProof" accept="image/png" required name="Payment" id="Payment">
                             <label for="Payment">Payment Proof (PNG)</label>
                         </div>
                     </div>
@@ -112,7 +146,6 @@
                         <button class="next_button">Next Step</button>
                     </div>
                 </div>
-                 
                 
                 <div class="main">
                     <small><i class="fa fa-envira"></i></small>
@@ -122,13 +155,13 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="Photo" id="Photo" require>
-                            <label>Photograph</label>
+                            <label for="Photo">Photograph (PNG)</label>
+                            <input type="file" accept="image/png" required name="Photograph" id="Photograph">
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="description" id="description" require>
+                            <input type="file"required name="description" id="description" require>
                             <label>Description</label>
                         </div>
                     </div>
@@ -145,10 +178,17 @@
                      
                     <div class="text congrats">
                         <h2>Congratulations!</h2>
-                        <p>Thanks Energizen. <span class="shown_name"></span> your information has been submitted successfully. Join the WhatsApp group <a href="https://your_whatsapp_group_link_here">here</a>.</p>
+                          Thanks Energizen. <span class="shown_name"></span> your
+                          information has been submitted successfully. Join the WhatsApp
+                          group
+                          <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC">here</a>.
+                        </p>
+                      </div>
                     </div>
-
+                </form>
             </div>
         </div>
     </div>
-</div>
+<script src="./photograph.js"></script>
+</body>
+</html>

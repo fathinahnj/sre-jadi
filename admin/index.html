@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siclus Data</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab-section">
+        <button class="tab-button" data-target="innovation-table">
+          Innovation Papers
+        </button>
+        <button class="tab-button" data-target="photography-table">
+          Photography
+        </button>
+        <button class="tab-button" data-target="studycase-table">
+          Study Cases
+        </button>
+      </div>
+
+      <div class="tab-content" id="innovation-table">
+        <button class="export-button" data-table="innovation-table">
+          Export Data
+        </button>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Team Name</th>
+                <th>Institution</th>
+                <th>Country</th>
+                <th>Sub Theme</th>
+                <th>Team Leader Name</th>
+                <th>Team Leader Institution</th>
+                <th>Team Leader Phone Number</th>
+                <th>Team Leader Email</th>
+                <th>First Member Name</th>
+                <th>First Member Major</th>
+                <th>Second Member Name</th>
+                <th>Second Member Major</th>
+                <!-- <th>Student ID Card</th> -->
+                <th>Flyers on Instagram</th>
+                <th>Twibbon</th>
+                <th>Flyers on Group Chats</th>
+                <th>Student ID Card/Study Plan</th>
+                <th>Originality Sheet</th>
+                <th>Abstract</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="photography-table">
+        <button class="export-button" data-table="photography-table">
+          Export Data
+        </button>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Institution</th>
+                <!-- <th>Country</th> -->
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Flyers on Instagram</th>
+                <th>Twibbon</th>
+                <th>Flyers on Group Chats</th>
+                <th>Student ID Card/Study Plan</th>
+                <th>Payment Method</th>
+                <th>Account Name</th>
+                <th>Payment Proof</th>
+                <th>Photograph</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="studycase-table">
+        <button class="export-button" data-table="studycase-table">
+          Export Data
+        </button>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Team Name</th>
+                <th>Institution</th>
+                <th>Country</th>
+                <th>Team Leader Name</th>
+                <th>Team Leader Major</th>
+                <th>Team Leader Phone Number</th>
+                <th>Team Leader Email</th>
+                <th>First Member Name</th>
+                <th>First Member Major</th>
+                <th>Second Member Name</th>
+                <th>Second Member Major</th>
+                <th>Flyers on Instagram</th>
+                <th>Twibbon</th>
+                <th>Flyers on Group Chats</th>
+                <th>Student ID Card/Study Plan</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

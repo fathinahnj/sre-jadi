@@ -6,7 +6,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SRE Universitas Hasanuddin</title>
+
+  <!-- feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>  
+
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./media.css">
   <style>
     @import url('https://fonts.cdnfonts.com/css/open-sauce-one');
   </style>
@@ -15,33 +20,47 @@
 <body>
   <!-- naf ubah tag <p> jadi <a> supaya bisa dimasukkan link-->
   <header>
+
+    <!-- navbar -->
     <nav class="navbar">
-      <img src="/image/SRE Unhas (Green).png" alt="">
+      <a href="#home" class="navbar-logo">
+        <img src="/image/SRE Unhas (Green).png" alt="">
+      </a>
+      
       <div class="navbar-item">
         <a href="#home" class="item">Home</a>
         <a href="#profile" class="item">Profile</a>
         <a href="#siclus" class="item">SICLUS</a>
         <a href="#contact" class="item">Contact Us</a>
       </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a> 
+      </div>
     </nav>
   </header>
 
   <!-- tiap section diberi id (naf)-->
+
   <main>
+    <!-- home -->
     <section id="home" class="home">
       <div class="title">
         <h1 id="welcome">Welcome, <br>Energizen!</h1>
       </div>
+      <div class="overlay"></div>
       <div class="cover">
         <img src="image\DSC03764-copy.JPG" height="3862" width="2172">    
       </div>
     </section>
 
+
+    <!-- profile -->
     <section id="profile" class="profile">
       <div>
         <img class="carousel" src="image\Rectangle 4.png">
       </div>
-      <div>
+      <div class="text-profile">
         <p class="title" id="profile-title">Who are we?</p>
         <p class="desc" id="profile-desc">Society of Renewable Energy Indonesia Chapter Universitas Hasanuddin (SRE UNHAS) is a student-led organization based in Universitas Hasanuddin which concerns about new and renewable energy and committed to advancing new and renewable energy in Indonesia. </p>
         <div class="fcc">
@@ -49,6 +68,8 @@
       </div>
     </section>
 
+
+    <!-- activities -->
     <p class="title" id="act-title">Our Recent Activities</p>
     <section class="act-container">
         <div class="activity">
@@ -57,7 +78,7 @@
           </div>
           <div>
             <div class="act-tulisan">
-              <p class="act-desc"><strong>PLTS SMK SMTI</strong></p>
+              <p class="act-judul"><strong>PLTS SMK SMTI</strong></p>
               <p class="act-desc">We built solar panels and learn about renewable energy together.</p>  
             </div>
             <div class="fcc">
@@ -73,7 +94,7 @@
           </div>
           <div>
             <div class="act-tulisan">
-              <p class="act-desc"><strong>I-REIF 2024</strong></p>
+              <p class="act-judul"><strong>I-REIF 2024</strong></p>
               <p class="act-desc">We attended a discussion forum with professionals in the field.</p>  
             </div>
             <div class="fcc">
@@ -90,7 +111,7 @@
           </div>
           <div>
             <div class="act-tulisan">
-              <p class="act-desc"><strong>SREVisit PLTB Sidrap</strong></p>
+              <p class="act-judul"><strong>SREVisit PLTB Sidrap</strong></p>
               <p class="act-desc">We paid a visit to one the biggest wind power plant in Indonesia.</p>  
             </div>
             <div class="fcc">
@@ -106,7 +127,7 @@
           </div>
           <div>
             <div class="act-tulisan">
-              <p class="act-desc"><strong>Berdikari Eneergy Village</strong></p>
+              <p class="act-judul"><strong>Berdikari Eneergy Village</strong></p>
               <p class="act-desc">We were involved in joint project aimed at mapping the potential of RE.</p>  
             </div>
             <div class="fcc">
@@ -140,17 +161,17 @@
     <div class="comp-title Innovation">
       <p><strong>Innovation Paper<br></strong></p>
     </div>
-        <li class="desc" id="comp-desc">Open Registration & Abstract Submission (June 3-17, 2024)</li>
-        <li class="desc" id="comp-desc">Abstract Announcement (June 22, 2024)</li>
-        <li class="desc" id="comp-desc">Full Paper Submission Batch 1 (June 23 - July 6, 2024)</li>
-        <li class="desc" id="comp-desc">Full Paper Submission Batch 2 (July 7-20, 2024)</li>
-        <li class="desc" id="comp-desc">Top 10 Announcement (August 10, 2024)</li>
-        <li class="desc" id="comp-desc">Technical Meeting (August 24, 2024)</li>
+        <li class="desc" id="comp-desc">Open Registration & Abstract Submission (June 10-28, 2024)</li>
+        <li class="desc" id="comp-desc">Abstract Announcement (July 2, 2024)</li>
+        <li class="desc" id="comp-desc">Full Paper Submission Batch 1 (July 3-13, 2024)</li>
+        <li class="desc" id="comp-desc">Full Paper Submission Batch 2 (July 14-27, 2024)</li>
+        <li class="desc" id="comp-desc">Top 10 Announcement (August 24, 2024)</li>
+        <li class="desc" id="comp-desc">Technical Meeting (September 14, 2024)</li>
         <li class="desc" id="comp-desc">Final Presentation (September 21, 2024)</li>
         <a href="https://drive.google.com/drive/folders/1-HB7UvUamQjlImvLgGgjoloiFxx0kIjN">
-          <button class="button" id="comp-btn1" style="margin-top: 63px;">See Guidebook</button>
+          <button class="button" id="comp-btn1" style="margin-top: 82px;">See Guidebook</button>
         </a>
-        <a href="Registrasi/innovation.html">
+        <a href="Registrasi/Innovation.html">
           <button class="button" id="comp-btn2">Register Now</button>
         </a>
     </div>
@@ -159,13 +180,13 @@
     <div class="comp-title">
       <p><strong>Study Case<br></strong></p>
     </div>
-        <li class="desc" id="comp-desc">Open Registration (June 3-17, 2024)</li>
-        <li class="desc" id="comp-desc">Preliminary Stage - Case 1 (June 22-28, 2024)</li>
-        <li class="desc" id="comp-desc">Semifinalist Announcement (June 30, 2024)</li>
-        <li class="desc" id="comp-desc">Semifinal Stage - Case 2 (July 1-10, 2024)</li>
-        <li class="desc" id="comp-desc">Finalist Announcement (August 10, 2024)</li>
-        <li class="desc" id="comp-desc">Final Stage - Case 3 (August 10-16, 2024)</li>
-        <li class="desc" id="comp-desc">Technical Meeting (August 24, 2024)</li>
+        <li class="desc" id="comp-desc">Open Registration (June 10-28, 2024)</li>
+        <li class="desc" id="comp-desc">Preliminary Stage - Case 1 (July 2-13, 2024)</li>
+        <li class="desc" id="comp-desc">Semifinalist Announcement (July 15, 2024)</li>
+        <li class="desc" id="comp-desc">Semifinal Stage - Case 2 (July 16-27, 2024)</li>
+        <li class="desc" id="comp-desc">Finalist Announcement (August 24, 2024)</li>
+        <li class="desc" id="comp-desc">Final Stage - Case 3 (August 24 - September 7, 2024)</li>
+        <li class="desc" id="comp-desc">Technical Meeting (September 14, 2024)</li>
         <li class="desc" id="comp-desc">Final Presentation (September 21, 2024)</li>
         <a href="https://drive.google.com/drive/folders/1-5y2SQHApMJYFoaTyxDjMuJFIzHvSrFd">
           <button class="button" id="comp-btn1">See Guidebook</button>
@@ -179,11 +200,11 @@
     <div class="comp-title">
       <p><strong>Photography<br></strong></p>
     </div>
-        <li class="desc" id="comp-desc">Open Registration & Photo Submission (June 3 - July 20, 2024)</li>
-        <li class="desc" id="comp-desc">Top 10 Announcement (August 10, 2024)</li>
+        <li class="desc" id="comp-desc">Open Registration & Photo Submission (June 10 - July 27, 2024)</li>
+        <li class="desc" id="comp-desc">Top 10 Announcement (August 24, 2024)</li>
         <li class="desc" id="comp-desc">Exhibition Day (September 21, 2024)</li>
         <a href="https://drive.google.com/drive/folders/1-8nbtYndH6L6ZJgHKufvxnYieRO-9hFY">
-          <button class="button" id="comp-btn1" style="margin-top: 252px;">See Guidebook</button> 
+          <button class="button" id="comp-btn1" style="margin-top: 271px;">See Guidebook</button> 
         </a>
         <a href="Registrasi/Photograph.html">
           <button class="button" id="comp-btn2">Register Now</button>
@@ -221,8 +242,8 @@
         </div>
         <img src="image\whatsapp-svgrepo-com.svg">
         <div class="account WhatsApp">
-          <a href="https://wa.me/6281234567890">081234567890 (Saya)</a>
-          <a href="https://wa.me/6281234567890">081234567890 (Aku)</a>
+          <a href="https://wa.me/6285195901404">+62 851-9590-1404 (Ima)</a>
+          <a href="https://wa.me/6285345750470">+62 853-4575-0470 (Alif)</a>
         </div>
         <img src="image\linkedin-svgrepo-com (2).svg">
         <div class="account linkedIn">
@@ -238,5 +259,10 @@
 
   <!-- js -->
   <script src="script.js"></script>
+  
+  <!-- feather icons -->
+  <script>
+      feather.replace();
+    </script>
 
 </body>

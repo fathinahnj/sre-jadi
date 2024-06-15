@@ -1,3 +1,4 @@
+// scroll to link
 $(document).ready(function(){
   $("a").on('click', function(event) {
     if (this.hash !== "") {
@@ -12,4 +13,24 @@ $(document).ready(function(){
       });
     }
   });
+});
+
+//toggle class active
+const navbarItems = document.querySelectorAll('.navbar-item');
+
+//hamburger click
+document.querySelector('.navbar-extra').addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default action
+  navbarItems.forEach(item => {
+    item.classList.toggle('active');
+  });
+});
+
+//klik diluar tutup navbar
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.navbar-extra') === null) {
+    navbarItems.forEach(item => {
+      item.classList.remove('active');
+    });
+  }
 });
