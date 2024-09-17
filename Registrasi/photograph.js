@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const photographyForm = document.getElementById("photography-form");
 
+  console.log(photographyForm);
+
   photographyForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(photographyForm);
-
-    formData.delete("payment_method");
 
     try {
       const response = await fetch(
@@ -24,10 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
       console.log(result);
 
-      // Display success message and proceed to the next step or reset the form
+      
       alert("Your information has been submitted successfully!");
 
-      // Optionally, show the congratulations screen
       document.querySelector(".main.active").classList.remove("active");
       document.querySelector(".main:last-child").classList.add("active");
     } catch (error) {

@@ -1,194 +1,278 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Registrasi</title>
-        <link href='#' rel='stylesheet'>
-        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css" />
-        <script type='text/javascript' src='#'></script>
-        <script src="./app.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="card">
-                <div class="form">
-                    <div class="left-side">
-                        <div class="left-heading">
-                            <h3>SICLUS 2024</h3>
-                        </div>
-                        <div class="steps-content">
-                            <h3>Step <span class="step-number">1</span></h3>
-                            <p class="step-number-content active">Enter your information to participate in SICLUS 2024.</p>
-                        </div>
-                        <ul class="progress-bar">
-                            <li class="active">Your Information</li>
-                            <li>Proof</li>
-                            <li>Payment</li>
-                            <li>Submission</li>
-                        </ul>
-                    </div>
-            <div class="right-side">
-                <div class="main active">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Self Bio</h2>
-                        <p>Inform us about yourself.</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" name="name" required require id="user_name">
-                            <span>Your Name</span>
-                        </div>
-                        <div class="input-div"> 
-                            <input type="text" name="institution" required>
-                            <span>Institution</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="tel" name="phoneNumber" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
-                            <span>Phone number</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
-                            <span>E-mail Address</span>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Registration Proof</h2>
-                        <p>Let us know if you completed the registration task</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" name="proofOfUploadingFlyersOnIgStory" required  id="Flyer">
-                            <label>Flyer on instagram story</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" name="proofOfUploadingTwibbonOnIgFeed" required name="Twibbon" id="Twibbon">
-                            <label>Twibbon</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="proofOfSharingFlyers" id="flyer">
-                            <label>Flyer on Group Chats</label>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" required name="studentIdCard"id="student_id_card">
-                            <label>Student ID Card/Study Plan</label>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-
-                 <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Payment Proof</h2>
-                        <p>Upload your payment proof here.</p>
-                    </div>
-                    <div class="payment-options">
-                        <label>
-                            <input type="checkbox" name="payment_method" value="bank" required>
-                            <span class="payment-method">
-                                <i class="fa fa-credit-card-alt"></i> Bank Digital Payment
-                            </span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="payment_method" value="paypal" required>
-                            <span class="payment-method">
-                                <i class="fa fa-paypal"></i> PayPal
-                            </span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="payment_method" value="E-wallet" required>
-                            <span class="payment-method">
-                                <i class="fa fa-money"></i> E-Wallet
-                            </span>
-                        </label>
-                    </div>                    
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Account Name</span>
-                        </div>
-                    </div>
-                    <div class="input-text" id="bankField" style="display: none;">
-                        <div class="input-div">
-                            <input type="text">
-                            <span>Bank (If You use this method)</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file" name="paymentProof" accept="image/png" required name="Payment" id="Payment">
-                            <label for="Payment">Payment Proof (PNG)</label>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                
-                <div class="main">
-                    <small><i class="fa fa-envira"></i></small>
-                    <div class="text">
-                        <h2>Submission</h2>
-                        <p>Submit your work</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <label for="Photo">Photograph (PNG)</label>
-                            <input type="file" accept="image/png" required name="Photograph" id="Photograph">
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="file"required name="description" id="description" require>
-                            <label>Description</label>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="submit_button">Submit</button>
-                    </div>
-                </div>
-                 <div class="main">
-                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                    </svg>
-                     
-                    <div class="text congrats">
-                        <h2>Congratulations!</h2>
-                          Thanks Energizen. <span class="shown_name"></span> your
-                          information has been submitted successfully. Join the WhatsApp
-                          group
-                          <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC">here</a>.
-                        </p>
-                      </div>
-                    </div>
-                </form>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registrasi</title>
+    <link href="#" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <form id="photography-form" class="form" novalidate>
+          <div class="left-side">
+            <div class="left-heading">
+              <h3>SICLUS 2024</h3>
             </div>
-        </div>
+            <div class="steps-content">
+              <h3>Step <span class="step-number">1</span></h3>
+              <p class="step-number-content active">
+                Enter your information to participate in SICLUS 2024.
+              </p>
+            </div>
+            <ul class="progress-bar">
+              <li class="active">Your Information</li>
+              <li>Proof</li>
+              <li>Payment</li>
+              <li>Submission</li>
+            </ul>
+          </div>
+          <div class="right-side">
+            <div class="main active">
+              <small><i class="fa fa-envira"></i></small>
+              <div class="text">
+                <h2>Self Bio</h2>
+                <p>Inform us about yourself.</p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input type="text" name="name" required id="user_name" />
+                  <span>Your Name</span>
+                </div>
+                <div class="input-div">
+                  <input type="text" name="institution" required />
+                  <span>Institution</span>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    required
+                    pattern="\+?[0-9]{10,15}"
+                    title="Phone number must be between 10 to 15 digits and can start with +"
+                  />
+                  <span>Phone number</span>
+                </div>
+                <div class="input-div">
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Please enter a valid email address"
+                  />
+                  <span>E-mail Address</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button type="button" class="next_button">Next Step</button>
+              </div>
+            </div>
+
+            <div class="main">
+              <small><i class="fa fa-envira"></i></small>
+              <div class="text">
+                <h2>Registration Proof</h2>
+                <p>Let us know if you completed the registration task</p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    required
+                    name="proofOfUploadingFlyersOnIgStory"
+                    id="Flyer"
+                  />
+                  <label>Flyer on Instagram</label>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    required
+                    name="proofOfUploadingTwibbonOnIgFeed"
+                    id="Twibbon"
+                  />
+                  <label>Twibbon</label>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    required
+                    name="proofOfSharingFlyers"
+                    id="flyer"
+                  />
+                  <label>Flyer on Group Chats</label>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    required
+                    name="studentIdCard"
+                    id="student_id_card"
+                  />
+                  <label>Student ID Card (PDF)</label>
+                </div>
+              </div>
+              <div class="buttons button_space">
+                <button type="button" class="back_button">Back</button>
+                <button type="button" class="next_button">Next Step</button>
+              </div>
+            </div>
+
+            <div class="main">
+              <small><i class="fa fa-envira"></i></small>
+              <div class="text">
+                <h2>Payment Proof</h2>
+                <p>Upload your payment proof here.</p>
+              </div>
+              <div class="payment-options">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="paymentMethod"
+                    value="bank"
+                    required
+                  />
+                  <span class="payment-method">
+                    <i class="fa fa-credit-card-alt"></i> Bank Digital Payment
+                  </span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="paymentMethod"
+                    value="paypal"
+                    required
+                  />
+                  <span class="payment-method">
+                    <i class="fa fa-paypal"></i> PayPal
+                  </span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="paymentMethod"
+                    value="E-wallet"
+                    required
+                  />
+                  <span class="payment-method">
+                    <i class="fa fa-money"></i> E-Wallet
+                  </span>
+                </label>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input type="text" required />
+                  <span>Account Name</span>
+                </div>
+              </div>
+              <div class="input-text" id="bankField" style="display: none">
+                <div class="input-div">
+                  <input type="text" />
+                  <span>Bank (If You use this method)</span>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    name="paymentProof"
+                    accept="image/png"
+                    required
+                    id="Payment"
+                  />
+                  <label for="Payment">Payment Proof (PNG)</label>
+                </div>
+              </div>
+              <div class="buttons button_space">
+                <button type="button" class="back_button">Back</button>
+                <button type="button" class="next_button">Next Step</button>
+              </div>
+            </div>
+
+            <div class="main">
+              <small><i class="fa fa-envira"></i></small>
+              <div class="text">
+                <h2>Submission</h2>
+                <p>Submit your work</p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <label for="Photo">Photograph (PNG)</label>
+                  <input
+                    type="file"
+                    accept="image/png"
+                    required
+                    name="photograph"
+                    id="Photograph"
+                  />
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input
+                    type="file"
+                    required
+                    name="description"
+                    id="description"
+                  />
+                  <label>Description</label>
+                </div>
+              </div>
+              <div class="buttons button_space">
+                <button type="button" class="back_button">Back</button>
+                <button type="submit" class="submit_button">Submit</button>
+              </div>
+            </div>
+
+            <div class="main">
+              <svg
+                class="checkmark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+              >
+                <circle
+                  class="checkmark__circle"
+                  cx="26"
+                  cy="26"
+                  r="25"
+                  fill="none"
+                />
+                <path
+                  class="checkmark__check"
+                  fill="none"
+                  d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                />
+              </svg>
+
+              <div class="text congrats">
+                <h2>Congratulations!</h2>
+                Thanks Energizen. <span class="shown_name"></span> your
+                information has been submitted successfully. Join the WhatsApp
+                group
+                <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC"
+                  >here</a
+                >.
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-<script src="./photograph.js"></script>
-</body>
+    <script src="./Photograph.js"></script>
+  </body>
 </html>

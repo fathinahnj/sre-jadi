@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function populateTable(tableId, data) {
   const tableBody = document.querySelector(`#${tableId} tbody`);
+  tableBody.innerHTML = ""; // Clear existing table body content
 
   data.forEach((item) => {
     const row = document.createElement("tr");
@@ -58,14 +59,16 @@ function populateTable(tableId, data) {
         key === "originalitySheet" ||
         key === "abstract" ||
         key === "paymentProof" ||
-        key === "photograph" ||
-        key === "description"
+        key.toLowerCase().includes("photograph") ||
+        key === "description" ||
+        key.toLowerCase().includes("twibbon")
       ) {
         const link = document.createElement("a");
         link.href = item[key];
         link.textContent = "Download";
         link.classList.add("download-link");
         link.setAttribute("download", "");
+        cell.setAttribute("data-url", item[key]);
         cell.appendChild(link);
       } else {
         cell.textContent = item[key];
@@ -79,7 +82,14 @@ function populateTable(tableId, data) {
 
 function exportTableToExcel(tableId) {
   const table = document.getElementById(tableId);
+  const tableClone = table.cloneNode(true); // Clone the table to avoid modifying the original
 
-  const wb = XLSX.utils.table_to_book(table, { sheet: "Sheet JS" });
+  // Replace the "Download" text with the actual URLs in the cloned table
+  const cells = tableClone.querySelectorAll("td[data-url]");
+  cells.forEach((cell) => {
+    cell.textContent = cell.getAttribute("data-url");
+  });
+
+  const wb = XLSX.utils.table_to_book(tableClone, { sheet: "Sheet JS" });
   XLSX.writeFile(wb, `${tableId}.xlsx`);
 }

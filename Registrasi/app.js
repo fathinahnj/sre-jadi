@@ -35,9 +35,6 @@ submit_click.forEach(function(submit_click_form) {
         if (!validateform()) {
             return false;
         }
-        shownname.innerHTML = username.value;
-        formnumber++;
-        updateform();
     });
 });
 
@@ -154,3 +151,5 @@ function validateform() {
 
     return validate;
 }
+
+
